@@ -1,33 +1,34 @@
-
 /**
- * Write a description of class Food here.
+ * Subclass called Food, superclass is Item.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Jenny Bi)
+ * @version (May 8, 2026)
  */
 public class Food extends Item
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Food
-     */
-    public Food()
+    //J instance variables
+    private String strExpiryDay; //J specific date of expiry, etc. May 9th, 2026
+    
+    //J default constructor
+    Food()
     {
-        // initialise instance variables
-        x = 0;
+        super();
+        this.strExpiryDay = "UNKNOWN";
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    //J constructor
+    Food(String e, String n, float p)
     {
-        // put your code here
-        return x + y;
+        super(n, p);
+        this.strExpiryDay = e;
+    }
+    
+    //J getters and setters
+    void setExpiryDay(String e)
+    {
+        this.strExpiryDay = e;
+    }
+    String getExpiryDay()
+    {
+        return this.strExpiryDay;
     }
 }

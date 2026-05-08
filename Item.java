@@ -1,4 +1,3 @@
-
 /**
  * Item class, class to build item objects which hold at least a name and price
  *

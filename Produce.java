@@ -1,33 +1,55 @@
-
 /**
- * Write a description of class Produce here.
+ * Subclass called Produce, superclass is Food, supersuper class is Item
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Jenny Bi)
+ * @version (May 8, 2026)
  */
 public class Produce extends Food
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Produce
-     */
-    public Produce()
+    //J instance variables
+    private boolean bolLocal;
+    private byte bytDaysExpired; //J this shows days until expiry, etc -1 is 1 day until expiry
+    private float fltWeight;
+    
+    Produce()
     {
-        // initialise instance variables
-        x = 0;
+        super();
+        this.bolLocal = false;
+        this.bytDaysExpired = 127;
+        this.fltWeight = -1;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    Produce(boolean l, byte d, float w, String e, String n, float p)
     {
-        // put your code here
-        return x + y;
+        super(e, n, p);
+        this.bolLocal = l;
+        this.bytDaysExpired = d;
+        this.fltWeight = w;
+    }
+    
+    //J getters and setters
+    void setLocal(boolean l)
+    {
+        this.bolLocal = l;
+    }
+    void setDaysExpired(byte d)
+    {
+        this.bytDaysExpired = d;
+    }
+    void setWeight(float w)
+    {
+        this.fltWeight = w;
+    }
+    public boolean getLocal()
+    {
+        return this.bolLocal;
+    }
+    public byte getDaysExpired()
+    {
+        return this.bytDaysExpired;
+    }
+    public float getWeight()
+    {
+        return this.fltWeight;
     }
 }
