@@ -8,7 +8,7 @@ public class Item
 {
     //R instance variables
     String strName;
-    float fltPrice;
+    float fltPrice; //for produce this is price per pound
     
     //R default constructor
     public Item()
