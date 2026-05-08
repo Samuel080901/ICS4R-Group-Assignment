@@ -10,16 +10,32 @@ In the end,ask if the user wants to purchase the things in the shopping cart or 
  * @author (Samuel Zhu)
  * @version (2026/05/08)
  */
+import java.util.Scanner;
 public class run
 {
     //Samuel : create a 2D Array that will be used to output category and item in each category
     String[][] aItemList = {
         
         {"Food","Furniture","Clothes","Electronic Device"},
-        {},
-        {},
-        {}
+        {"Apple","Banana","Candy"},
+        {"Chair","Table","Desk"},
+        {"PC","phone","VR"}
     
     };
     
+    //Samuel - Create 2 byte that store index for category and item
+    byte bytIndexC;
+    byte bytIndexI;
+    
+    //Samuel - run method
+    public void Run(){
+        //Samuel : output the list of category
+        System.out.println("Please Enter Cateogry of the item you want:\n");
+        for(byte i = 0; i < aItemList[0].length;i++){
+            System.out.println(i+") " + aItemList[0][i] + "\n");
+        }
+    
+    
+    }
+        
 }
