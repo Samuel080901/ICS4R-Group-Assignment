@@ -19,6 +19,7 @@ public class run
         {"Food","Furniture","Clothes","Electronic Device"},
         {"Apple","Banana","Candy"},
         {"Chair","Table","Desk"},
+        {"Shirt","pants","jacket"},
         {"PC","phone","VR"}
     
     };
@@ -28,14 +29,36 @@ public class run
     byte bytIndexI;
     
     //Samuel - run method
-    public void Run(){
+    public void Input(){
         //Samuel : output the list of category
         System.out.println("Please Enter Cateogry of the item you want:\n");
         for(byte i = 0; i < aItemList[0].length;i++){
             System.out.println((i+1)+") " + aItemList[0][i] + "\n");
         }
-    
-    
+        
+        
+        //Samuel : make a try catch
+        //S: ask for input
+        try{
+        bytIndexC = new Scanner(System.in).nextByte();
+        }
+        catch (Exception e){
+            Input();
+        }
+        //Samuel : output the list of item in category that user chooses
+        System.out.println("Please Enter item you want:\n");
+        for(byte i = 0; i < aItemList[bytIndexC].length;i++){
+            System.out.println((i+1)+") " + aItemList[bytIndexC][i] + "\n");
+        }
+        
+        //Samuel : make a try catch
+        //S: ask for input
+        try{
+        bytIndexC = new Scanner(System.in).nextByte();
+        }
+        catch (Exception e){
+            Input();
+        }
     }
         
 }

@@ -11,7 +11,7 @@ public class TestClass
     
         //Samuel : Create a run object and call the run method in it
         run r = new run();
-        r.Run();
+        r.Input();
     
     
     
