@@ -54,7 +54,18 @@ public class run
         //Samuel : make a try catch
         //S: ask for input
         try{
-        bytIndexC = new Scanner(System.in).nextByte();
+        bytIndexI = new Scanner(System.in).nextByte();
+        }
+        catch (Exception e){
+            Input();
+        }
+        
+        //S: output a message to ask user amount user wants to purchase
+        System.out.println("Please Enter Amount you want to purchase:\n");
+        //Samuel : make a try catch
+        //S: ask for input
+        try{
+        bytIndexI = new Scanner(System.in).nextByte();
         }
         catch (Exception e){
             Input();
