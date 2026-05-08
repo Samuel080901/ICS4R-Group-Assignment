@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class ElectronicDevice here.
+ * Electronic device class with storage, wifi and size instance variables.
  *
  * @author (your name)
  * @version (a version number or a date)
