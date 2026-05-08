@@ -32,7 +32,7 @@ public class run
         //Samuel : output the list of category
         System.out.println("Please Enter Cateogry of the item you want:\n");
         for(byte i = 0; i < aItemList[0].length;i++){
-            System.out.println(i+") " + aItemList[0][i] + "\n");
+            System.out.println((i+1)+") " + aItemList[0][i] + "\n");
         }
     
     
