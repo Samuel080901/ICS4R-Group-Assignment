@@ -11,6 +11,7 @@ public class Produce extends Food
     private byte bytDaysExpired; //J this shows days until expiry, etc -1 is 1 day until expiry
     private float fltWeight;
     
+    //J Default Constructor
     Produce()
     {
         super();
@@ -18,7 +19,7 @@ public class Produce extends Food
         this.bytDaysExpired = 127;
         this.fltWeight = -1;
     }
-    
+    //J Constructor
     Produce(boolean l, byte d, float w, String e, String n, float p)
     {
         super(e, n, p);
