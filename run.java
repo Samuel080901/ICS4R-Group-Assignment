@@ -29,7 +29,7 @@ public class run
     byte bytIndexI;
     
     //Samuel - run method
-    public void Input(){
+    public void Run(){
         //Samuel : output the list of category
         System.out.println("Please Enter Cateogry of the item you want:\n");
         for(byte i = 0; i < aItemList[0].length;i++){
@@ -43,7 +43,7 @@ public class run
         bytIndexC = new Scanner(System.in).nextByte();
         }
         catch (Exception e){
-            Input();
+            Run();
         }
         //Samuel : output the list of item in category that user chooses
         System.out.println("Please Enter item you want:\n");
@@ -57,7 +57,7 @@ public class run
         bytIndexI = new Scanner(System.in).nextByte();
         }
         catch (Exception e){
-            Input();
+            Run();
         }
         
         //S: output a message to ask user amount user wants to purchase
@@ -68,7 +68,7 @@ public class run
         bytIndexI = new Scanner(System.in).nextByte();
         }
         catch (Exception e){
-            Input();
+            Run();
         }
     }
         
