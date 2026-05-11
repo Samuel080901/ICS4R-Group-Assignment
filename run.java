@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 /**
  * Ask User name,password.Create object using that input.  Save that information using fileIO. If User Account (Name) Already Exists,check if the password is saved in a txt file matching the password the user is inputting. 
 See if previous data exist or not,if exist using those data inside,recreate the object and save that into ArrayList
@@ -10,7 +10,7 @@ In the end,ask if the user wants to purchase the things in the shopping cart or 
  * @author (Samuel Zhu)
  * @version (2026/05/08)
  */
-import java.util.Scanner;
+
 public class run
 {
     //Samuel : create a 2D Array that will be used to output category and item in each category
