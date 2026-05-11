@@ -21,10 +21,10 @@ public class ElectronicDevice extends Item
         this.fltScreenSize = 0.0f;
     }
 
-    public ElectronicDevice(String n, float p, short st, boolean w, float ss)
+    public ElectronicDevice(String n, float p, short st, boolean w, float ss, byte a)
     {
         // initialise instance variables
-        super(n, p);
+        super(n, p, a);
         this.shrStorage = st;
         this.bolNeedsWifi = w;
         this.fltScreenSize = ss;

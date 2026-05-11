@@ -16,9 +16,9 @@ public class Food extends Item
         this.strExpiryDay = "UNKNOWN";
     }
     //J constructor
-    Food(String e, String n, float p)
+    Food(String e, String n, float p, byte a)
     {
-        super(n, p);
+        super(n, p, a);
         this.strExpiryDay = e;
     }
     
