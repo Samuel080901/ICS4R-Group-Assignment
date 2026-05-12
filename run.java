@@ -240,9 +240,9 @@ public class run
                     shrTemp = new Scanner(System.in).nextShort();
                     //H -output a message if user enter negative value
                     
-                    if(Byte.parseByte(shrTemp) <= 0){
+                    if(shrTemp <= 0){
                         System.out.println("Value needs to be above 0");
-                        
+                        shrTemp = -1;
                     }
 
             }while(shrTemp <= 0 );//ask and populate the temp string
@@ -253,13 +253,30 @@ public class run
                 //H - ask for input
                 
                 strTemp1 = new Scanner(System.in).nextLine().toLowerCase();
-                //H -output a message if user enter wrong value
+                //H -output a message if user enter wrong value and populates the temp if the right value is inputted
                 if(strTemp1.equals("yes")){
-                    
+                    bolTemp = true;
                 }
-                    
-
-            }while(strTemp1.equals(null));//ask and populate the temp string
+                else if(strTemp1.equals("no")){
+                    bolTemp = false;
+                }
+                else{
+                    strTemp1 = null;
+                    System.out.println("please enter yes or no");
+                }
+            }while(strTemp1.equals(null));//runs until the temp is populated
+            
+            do{
+                //H - output a message to ask user storage amount the user wants to purchase
+                System.out.println("Please input the size of your screen in inches");
+                
+                fltTemp = new Scanner(System.in).nextFloat();
+                //H -output a message if user enter wrong value and populates the temp if the right value is inputted
+                if(fltTemp <= 1){
+                    System.out.println("this is way too small!");
+                }
+            }while(fltTemp <= 1);//runs until the temp is populated
+            
             
         }
         
