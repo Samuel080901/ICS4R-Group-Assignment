@@ -26,4 +26,30 @@ public class Item
        this.fltPrice = p;
        this.bytItemAmount = i;
     }
+    
+    //J made getters and setters
+    public String getName()
+    {
+        return this.strName;
+    }
+    public float getPrice()
+    {
+        return this.fltPrice;
+    }
+    public byte getAmount()
+    {
+        return this.bytItemAmount;
+    }
+    public void setName(String n)
+    {
+        this.strName = n;
+    }
+    public void setPrice(float p)
+    {
+        this.fltPrice = p;
+    }
+    public void setAmount(byte a)
+    {
+        this.bytItemAmount = a;
+    }
 }
