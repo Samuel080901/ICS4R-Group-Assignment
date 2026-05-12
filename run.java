@@ -36,6 +36,9 @@ public class run
     
     };
     
+    //S: create a arraylist tha is used as shopping list
+    
+    
     //Samuel - run method
     public void Run(){
         //Samuel - Create 2 byte that store index for category and item,intialize to -1 because we need to
@@ -142,8 +145,87 @@ public class run
         if(bytIndexC == 1){//S:(Food)
             //S: for food we alse need to ask is it produce or not
         
+            
+            
         }
         else if (bytIndexC == 2){//S:(Furniture)
+
+        
+        
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
             
         }
         else if (bytIndexC == 3){//S:(Clothes)
