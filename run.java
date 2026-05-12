@@ -54,7 +54,7 @@ public class run
         String strTemp2;
         short shrTemp;
         float fltTemp;
-        boolean bolTemp;
+        boolean bolTemp = false;
         
         //S:create a do while loop that loop until user enter correct value
         do{
@@ -152,10 +152,37 @@ public class run
         }
         else if (bytIndexC == 2){//S:(Furniture)
 
+             
+            do{
+                //S: output a message to ask user amount user wants to purchase
+                System.out.println("Do you want decoration for your furniture (Yes/No)");
+                
+                
+                strTemp1 = new Scanner(System.in).nextLine();
+                //S:output a message if user enter negative value
+                if(!strTemp1.equalsIgnoreCase("Yes") &&!strTemp1.equals("No")){
+                    System.out.println("Enter Yes or No");
+                    strTemp1 = "1";
+                }
+               
+                
+            }while(strTemp1.equals("1") );
+        
+            //S:Convert yes or no into true or false
+            if(strTemp1.equalsIgnoreCase("Yes")){
+                bolTemp  = true;
+            }
+            else if(strTemp1.equalsIgnoreCase("No")){
+                bolTemp  = false;
+            }
+            
+            //create a object using all the input and save that into arralist
+            itemList.add( new Furniture(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp));
+        }    
         
         
             
-        }    
+           
             
             
             
@@ -290,7 +317,6 @@ public class run
     
 
 }
-
 
 
 

@@ -11,6 +11,7 @@ public class Produce extends Food
     private byte bytDaysExpired; //J this shows days until expiry, etc -1 is 1 day until expiry
     private float fltWeight; //J weight in pounds
     
+    //J conversion method
     public float weightToPrice()
     {
         return this.fltPrice*fltWeight;
