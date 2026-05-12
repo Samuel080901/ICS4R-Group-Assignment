@@ -9,7 +9,7 @@ import java.io.*;
 public class User
 {
     //R user class store username and password
-    //R code method that writes to a user's file thei rname password 
+    //R code method that writes to a user's file their name password 
     //R and what theyve bought
 
     static String strUsername;
@@ -60,15 +60,16 @@ public class User
                 System.out.println("Please enter your password");
                 strPassword = userInput.next();
 
-                do
+                while (strPassword.equals(strPasswordOnFile) != true)
                 { 
                     System.out.println("Incorrect Passowrd, try again");
                     strPassword = userInput.next();
-                }while (strPassword.equals(strPasswordOnFile) != true);
+                }
+                System.out.println("Welcome back, " + strUsername);
             }
             else
             {
-                System.out.print("Seems youre a new user, please set your password");
+                System.out.println("Seems youre a new user, please set your password");
                 strPassword = userInput.next();
 
                 do
@@ -78,11 +79,13 @@ public class User
                 }while (strPassword.equals(strConfirmPassword) != true);
 
                 setPassword(strPassword);
+                System.out.println("Welcome, " + strUsername);
             }
 
-            out = new PrintWriter(new FileWriter("strUsername.txt"));
+            out = new PrintWriter(new FileWriter(strUsername + ".txt"), true);
             out.println(strUsername);
             out.println(strPassword);
+           
 
         }
         catch (FileNotFoundException e)
@@ -94,6 +97,5 @@ public class User
         {
             System.out.println("Error writing to file");
         }
-
     }
 }

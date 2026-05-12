@@ -10,6 +10,7 @@ In the end,ask if the user wants to purchase the things in the shopping cart or 
  * @author (Samuel Zhu)
  * @version (2026/05/08)
  */
+import java.util.ArrayList;
 //S: if there is comment with no name with it,its probably mine
 public class run
 {
@@ -37,7 +38,7 @@ public class run
     };
     
     //S: create a arraylist tha is used as shopping list
-    
+    ArrayList<Item> itemList = new ArrayList<Item>();
     
     //Samuel - run method
     public void Run(){
@@ -153,8 +154,7 @@ public class run
         
         
             
-            
-            
+        }    
             
             
             
@@ -226,8 +226,6 @@ public class run
             
             
 
-            
-        }
         else if (bytIndexC == 3){//S:(Clothes)
             //ask and populate the variables
         
@@ -253,12 +251,14 @@ public class run
                 System.out.println("Does your device need wifi? Yes/No");
                 //H - ask for input
                 
-                    strTemp1 = new Scanner(System.in).nextLine().toLowerCase();
-                    //H -output a message if user enter wrong value
+                strTemp1 = new Scanner(System.in).nextLine().toLowerCase();
+                //H -output a message if user enter wrong value
+                if(strTemp1.equals("yes")){
                     
+                }
                     
 
-            }while(shrTemp <= 0 );//ask and populate the temp string
+            }while(strTemp1.equals(null));//ask and populate the temp string
             
         }
         
@@ -270,17 +270,7 @@ public class run
         
     }
     
-    //S:check is the number power of another power
-    //S: for example to check is 2048 power of 2,and return should be true
-    public boolean checkPower(float fltValue,short shrPower){
-        
-    
-    
-    
-    
-        return true;
-    }
-        
+
 }
 
 
