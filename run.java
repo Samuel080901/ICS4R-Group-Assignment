@@ -229,14 +229,37 @@ public class run
             
         }
         else if (bytIndexC == 3){//S:(Clothes)
-            
+            //ask and populate the variables
         
         }
         else if (bytIndexC == 4){//S:(Electronic Device)
-            //ask and populate the temp string
+            do{
+                //H - output a message to ask user storage amount the user wants to purchase
+                System.out.println("How much storage do you need? Please enter only numbers");
+                //H - ask for input
+                
+                    shrTemp = new Scanner(System.in).nextShort();
+                    //H -output a message if user enter negative value
+                    
+                    if(Byte.parseByte(shrTemp) <= 0){
+                        System.out.println("Value needs to be above 0");
+                        
+                    }
+
+            }while(shrTemp <= 0 );//ask and populate the temp string
             
+            do{
+                //H - output a message to ask user storage amount the user wants to purchase
+                System.out.println("Does your device need wifi? Yes/No");
+                //H - ask for input
+                
+                    strTemp1 = new Scanner(System.in).nextLine().toLowerCase();
+                    //H -output a message if user enter wrong value
+                    
+                    
+
+            }while(shrTemp <= 0 );//ask and populate the temp string
             
-        
         }
         
         
@@ -255,7 +278,7 @@ public class run
     
     
     
-    
+        return true;
     }
         
 }
