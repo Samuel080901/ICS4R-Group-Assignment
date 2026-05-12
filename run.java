@@ -150,6 +150,7 @@ public class run
             
         }
         else if (bytIndexC == 2){//S:(Furniture)
+
         
         
             
@@ -225,10 +226,10 @@ public class run
             
             
             
-            
-        
+
+
         else if (bytIndexC == 3){//S:(Clothes)
-        
+            
         
         }
         else if (bytIndexC == 4){//S:(Electronic Device)
