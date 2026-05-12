@@ -49,11 +49,12 @@ public class run
         //S: create a byte value that store amount of item user wants to purchase
         byte bytItemAmount;
         
-        //S: create 3 string that will store extra info enter by user
-        //S: info saved will change base on item selected
+        //S: create temprery variable that will be used to store extra info
         String strTemp1;
         String strTemp2;
-        String strTemp3;
+        short shrTemp;
+        float fltTemp;
+        boolean bolTemp;
         
         //S:create a do while loop that loop until user enter correct value
         do{
