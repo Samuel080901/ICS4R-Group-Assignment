@@ -10,6 +10,7 @@ In the end,ask if the user wants to purchase the things in the shopping cart or 
  * @author (Samuel Zhu)
  * @version (2026/05/08)
  */
+import java.util.ArrayList;
 //S: if there is comment with no name with it,its probably mine
 public class run
 {
@@ -37,7 +38,7 @@ public class run
     };
     
     //S: create a arraylist tha is used as shopping list
-    
+    ArrayList<Item> itemList = new ArrayList<Item>();
     
     //Samuel - run method
     public void Run(){
@@ -152,6 +153,7 @@ public class run
         
         
             
+        }    
             
             
             
@@ -224,8 +226,7 @@ public class run
             
             
             
-            
-        }
+        
         else if (bytIndexC == 3){//S:(Clothes)
         
         
@@ -245,17 +246,7 @@ public class run
         
     }
     
-    //S:check is the number power of another power
-    //S: for example to check is 2048 power of 2,and return should be true
-    public boolean checkPower(float fltValue,short shrPower){
-        
-    
-    
-    
-    
-    
-    }
-        
+   
 }
 
 
