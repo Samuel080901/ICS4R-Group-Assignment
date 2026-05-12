@@ -10,6 +10,7 @@ In the end,ask if the user wants to purchase the things in the shopping cart or 
  * @author (Samuel Zhu)
  * @version (2026/05/08)
  */
+import java.util.ArrayList;
 //S: if there is comment with no name with it,its probably mine
 public class run
 {
@@ -35,6 +36,9 @@ public class run
         {0.14f,0.15f,0.16f}
     
     };
+    
+    //S: create a arraylist tha is used as shopping list
+    ArrayList<Item> itemList = new ArrayList<Item>();
     
     //Samuel - run method
     public void Run(){
@@ -142,13 +146,88 @@ public class run
         if(bytIndexC == 1){//S:(Food)
             //S: for food we alse need to ask is it produce or not
         
+            
+            
         }
         else if (bytIndexC == 2){//S:(Furniture)
+
         
         
-        }
+            
+        }    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
         else if (bytIndexC == 3){//S:(Clothes)
-        
+            
         
         }
         else if (bytIndexC == 4){//S:(Electronic Device)
@@ -166,6 +245,7 @@ public class run
         
     }
     
+<<<<<<< HEAD
     //S:check is the number power of another power
     //S: for example to check is 2048 power of 2,and return should be true
     public boolean checkPower(float fltValue,short shrPower){
@@ -177,6 +257,9 @@ public class run
      return true;
     }
         
+=======
+   
+>>>>>>> 8a1644ee96124c221343e89c95d1f42f52eadf35
 }
 
 

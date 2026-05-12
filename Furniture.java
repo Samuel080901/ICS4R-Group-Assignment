@@ -7,27 +7,31 @@
  */
 public class Furniture extends Item
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Furniture
-     */
-    public Furniture()
+    //H - instance variables for the furniture object
+    private boolean bolIsDecoration;
+    
+    //H - constructor for furniture object
+    Furniture(String n, float p, byte a, boolean d)
     {
-        // initialise instance variables
-        x = 0;
+        super(n, p, a);
+        bolIsDecoration = d;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    
+    //H - default constructor for clothes object
+    Furniture()
     {
-        // put your code here
-        return x + y;
+        super();
+        this.bolIsDecoration = false;
     }
+    
+    //H - code for setters in the furniture class
+    void setIsDecoration(boolean d){this.bolIsDecoration = d;}
+    
+    //H - code for getters in the furniture class
+    boolean getIsDecoration()
+    {
+        return this.bolIsDecoration;
+    }
+    
 }
