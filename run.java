@@ -225,8 +225,6 @@ public class run
             
             
             
-            
-
 
         else if (bytIndexC == 3){//S:(Clothes)
             
