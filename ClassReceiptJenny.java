@@ -16,7 +16,7 @@
  */
 import java.util.*;
 import java.io.*;
-public class JennyClass
+public class ClassReceiptJenny
 {
     public static void main(String args[])
     {
@@ -50,8 +50,7 @@ public class JennyClass
         System.out.println(" (if you leave, you can save for next time)");
         System.out.println("  1. purchase     2. leave");
         bytChoice = new Scanner(System.in).nextByte();
-        System.out.println("Confirm purchase? 1. y, 2. n");
-        bytChoice = new Scanner(System.in).nextByte();
+        
         
         
         if(bytChoice == 1)
@@ -63,6 +62,9 @@ public class JennyClass
             }
             else
             {
+                System.out.println("Confirm purchase? 1. y, 2. n");
+                bytChoice = new Scanner(System.in).nextByte();
+                
                 //J I learned this for dramatic effect, don't put it if you don't want to
                 try
                 {
