@@ -212,7 +212,7 @@ public class run
                 
                 //create a object using all the input and save that into arralist
 
-                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,"a",bolTemp,(byte)12,fltTemp));
+                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp,(byte)12,fltTemp));
 
 
             }            
@@ -338,12 +338,12 @@ public class run
         //S:ask user wants to purchase a new item or not
         do{
                 //S: output a message to ask user amount user wants to purchase
-                System.out.println("Do you want but a new object (Yes/No)");
+                System.out.println("Do you want buy a new object (Yes/No)");
                 
                 
                 strTemp1 = new Scanner(System.in).nextLine();
                 //S:output a message if user enter negative value
-                if(!strTemp1.equalsIgnoreCase("Yes") &&!strTemp1.equals("No")){
+                if(!strTemp1.toLowerCase().equalsIgnoreCase("yes") &&!strTemp1.toLowerCase().equals("no")){
                     System.out.println("Enter Yes or No");
                     strTemp1 = "1";
                 }
