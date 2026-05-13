@@ -21,7 +21,7 @@ public class ElectronicDevice extends Item
         this.fltScreenSize = 0.0f;
     }
 
-    public ElectronicDevice(String n, float p, short st, boolean w, float ss, byte a)
+    public ElectronicDevice(String n, float p, byte a ,short st, boolean w, float ss)
     {
         // initialise instance variables
         super(n, p, a);

@@ -18,12 +18,15 @@ public class run
     String[][] aItemList = {
         
         {"Food","Furniture","Clothes","Electronic Device"},
+        //S:put fresh food (produce) at front
         {"Apple","Banana","Candy"},
         {"Chair","Table","Desk"},
         {"Shirt","pants","jacket"},
         {"PC","phone","VR"}
     
     };
+    //S:Create a contant value that will used to determine is the food produce or not
+    final byte PRODUCEINDEX = 1;
     
     // S:create a 2D array that will be storing price of each item,use it when create the object
     //the price is temporary
@@ -145,10 +148,57 @@ public class run
         //S:ask user extra information based on what they choose to buy
         //S: will be done using if statement
         if(bytIndexC == 1){//S:(Food)
-            //S: for food we alse need to ask is it produce or not
-        
+            //S: use the PRODUCEINDEX to check is item purchase produce or not,if yes ask for extra information
+            if(bytIndexI <= PRODUCEINDEX){
+                //S: prompt extra info 
+                System.out.println("");
+                do{
+                //S: output a message to ask user amount user wants to purchase
+                System.out.println("Do you want the food to be local (Yes/No)");
+                
+                
+                strTemp1 = new Scanner(System.in).nextLine();
+                //S:output a message if user enter negative value
+                if(!strTemp1.equalsIgnoreCase("Yes") &&!strTemp1.equals("No")){
+                    System.out.println("Enter Yes or No");
+                    strTemp1 = "1";
+                }
+               
+                
+                }while(strTemp1.equals("1") );
             
-            
+                //S:Convert yes or no into true or false
+                if(strTemp1.equalsIgnoreCase("Yes")){
+                    bolTemp  = true;
+                }
+                else if(strTemp1.equalsIgnoreCase("No")){
+                    bolTemp  = false;
+                }
+                
+                //S:create a do while loop that loop until user enter correct value
+                do{
+                       //S: output a message to ask user amount user wants to purchase
+                    System.out.println("Please Enter Amount you want to purchase (pounds):\n");
+                    //Samuel : make a try catch
+                    //S: ask for input
+                    try{
+                        fltTemp = new Scanner(System.in).nextFloat();
+                        //S:output a message if user enter negative value
+                        if(bytItemAmount <= 0){
+                            System.out.println("Value needs to be above 0");
+                            
+                        }
+                    }
+                    catch (Exception e){
+                        System.out.println("Wrong input");
+                        fltTemp = -100;
+                    }
+                    
+                }while(fltTemp <= 0 );
+                
+                //create a object using all the input and save that into arralist
+                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp));
+            }            
         }
         else if (bytIndexC == 2){//S:(Furniture)
 

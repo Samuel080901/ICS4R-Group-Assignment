@@ -26,7 +26,7 @@ public class Produce extends Food
         this.fltWeight = -1;
     }
     //J Constructor
-    Produce(boolean l, byte d, float w, String e, String n, float p, byte a)
+    Produce(boolean l, byte d,byte a, float w, String e, String n, float p )
     {
         super(e, n, p, a);
         this.bolLocal = l;
