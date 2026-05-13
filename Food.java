@@ -1,4 +1,4 @@
-/**
+    /**
  * Subclass called Food, superclass is Item.
  *
  * @author (Jenny Bi)
@@ -16,7 +16,7 @@ public class Food extends Item
         this.strExpiryDay = "UNKNOWN";
     }
     //J constructor
-    Food(String e, String n, float p, byte a)
+    Food(String e, String n,byte a, float p )
     {
         super(n, p, a);
         this.strExpiryDay = e;
