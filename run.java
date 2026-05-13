@@ -197,7 +197,7 @@ public class run
                 }while(fltTemp <= 0 );
                 
                 //create a object using all the input and save that into arralist
-                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp));
+                //itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp));
             }            
         }
         else if (bytIndexC == 2){//S:(Furniture)
@@ -381,7 +381,7 @@ public class run
             }while(fltTemp <= 1);//runs until the temp is populated
             
             //H - create a new electronic device object
-            itemList.add( new ElectronicDevice(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI], bytItemAmount, bolTemp, fltTemp, shrTemp));
+            itemList.add( new ElectronicDevice(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI], bytItemAmount, shrTemp, bolTemp, fltTemp));
             
         }
         
