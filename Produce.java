@@ -33,6 +33,7 @@ public class Produce extends Food
         super( n,p, a, e);
 
 
+
         this.bolLocal = l;
         this.bytDaysExpired = d;
         this.fltWeight = w;
