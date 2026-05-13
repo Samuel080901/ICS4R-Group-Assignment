@@ -197,7 +197,7 @@ public class run
                 }while(fltTemp <= 0 );
                 
                 //create a object using all the input and save that into arralist
-                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp));
+                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,"a",bolTemp,(byte)12,fltTemp));
             }            
         }
         else if (bytIndexC == 2){//S:(Furniture)
