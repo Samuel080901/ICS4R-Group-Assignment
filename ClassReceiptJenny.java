@@ -97,7 +97,7 @@ public class ClassReceiptJenny
                     fltTotal += i.getPrice();
                 }
                 System.out.println("------------------");
-                System.out.println("Total:            "+fltTotal);
+                System.out.printf("Total:             %.2f%n", fltTotal); //this rounds the number to 2 decimals
                 System.out.println(strName);
                 System.out.println("------------------");
                 System.out.print("THANK YOU FOR PURCHASING AT ESHOP");
