@@ -29,7 +29,9 @@ public class Produce extends Food
     Produce(String n,float p,byte a, String e,  boolean l, byte d, float w)
     {
 
+
         super( n,p, a, e);
+
 
         this.bolLocal = l;
         this.bytDaysExpired = d;

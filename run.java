@@ -200,6 +200,7 @@ public class run
 
                 itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,"a",bolTemp,(byte)12,fltTemp));
 
+
             }            
         }
         else if (bytIndexC == 2){//S:(Furniture)
