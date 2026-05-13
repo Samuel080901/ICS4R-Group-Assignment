@@ -43,8 +43,10 @@ public class run
     //S: create a arraylist tha is used as shopping list
     ArrayList<Item> itemList = new ArrayList<Item>();
     
-    //Samuel - run method
-    public void Run(){
+    
+    
+    //Samuel - Input method
+    public void Input(){
         //S:call loggin in user class
         User.logIn();
         
@@ -324,8 +326,27 @@ public class run
         
         
         
+        //S:ask user wants to purchase a new item or not
+        do{
+                //S: output a message to ask user amount user wants to purchase
+                System.out.println("Do you want but a new object (Yes/No)");
+                
+                
+                strTemp1 = new Scanner(System.in).nextLine();
+                //S:output a message if user enter negative value
+                if(!strTemp1.equalsIgnoreCase("Yes") &&!strTemp1.equals("No")){
+                    System.out.println("Enter Yes or No");
+                    strTemp1 = "1";
+                }
+               
+                
+            }while(strTemp1.equals("1") );
         
-        
+            //S:Convert yes or no into true or false
+            if(strTemp1.equalsIgnoreCase("Yes")){
+                Input();
+            }
+            
         
     }
     
