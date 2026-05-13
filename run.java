@@ -255,22 +255,48 @@ public class run
             
 
         else if (bytIndexC == 3){//S:(Clothes)
-            //ask and populate the variables
-        
+            //H - ask and populate the variables
+            do{
+                //H - output a message to ask user storage amount the user wants to purchase
+                System.out.println("what kind of clothing do you have?");
+                //H - ask for input
+                    //H - strTemp2 is set to null incase it was populated earlier
+                    strTemp2 = null;
+                    strTemp2 = new Scanner(System.in).nextLine();
+                 
+            }while(strTemp2.equals(null));//ask and populate the temp string
+            
+            do{
+                //H - output a message to ask user storage amount the user wants to purchase
+                System.out.println("what which brand did you buy?");
+                //H - ask for input
+                    //H - strTemp1 is set to null incase it was populated earlier
+                    strTemp1 = null;
+                    strTemp1 = new Scanner(System.in).nextLine();
+                 
+            }while(strTemp1.equals(null));//ask and populate the temp string
+            
+            //create a new clothing object
+            itemList.add( new Clothes(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount, strTemp1, strTemp2));
+            
         }
-        else if (bytIndexC == 4){//S:(Electronic Device)
+        else if (bytIndexC == 4){//H -(Electronic Device)
             do{
                 //H - output a message to ask user storage amount the user wants to purchase
                 System.out.println("How much storage do you need? Please enter only numbers");
                 //H - ask for input
-                
+                shrTemp = -1;
+                try{
                     shrTemp = new Scanner(System.in).nextShort();
-                    //H -output a message if user enter negative value
-                    
-                    if(shrTemp <= 0){
-                        System.out.println("Value needs to be above 0");
-                        shrTemp = -1;
-                    }
+                }catch(Exception e){
+                    System.out.println("Please only enter numbers");
+                }
+                
+                //H -output a message if user enter negative value    
+                if(shrTemp <= 0){
+                    System.out.println("Value needs to be above 0");
+                    shrTemp = -1;
+                }
 
             }while(shrTemp <= 0 );//ask and populate the temp string
             
@@ -304,6 +330,8 @@ public class run
                 }
             }while(fltTemp <= 1);//runs until the temp is populated
             
+            //H - create a new electronic device object
+            itemList.add( new ElectronicDevice(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI], bytItemAmount, bolTemp, fltTemp, shrTemp));
             
         }
         
