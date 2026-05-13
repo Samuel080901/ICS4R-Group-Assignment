@@ -43,11 +43,15 @@ public class run
     //S: create a arraylist tha is used as shopping list
     ArrayList<Item> itemList = new ArrayList<Item>();
     
-    //Samuel - run method
     public void Run(){
         //S:call loggin in user class
         User.logIn();
-        
+        Input();
+        //H - call the receipt class
+        ClassReceiptJenny.testMethod();
+    }
+    //Samuel - run method
+    public void Input(){
         //Samuel - Create 2 byte that store index for category and item,intialize to -1 because we need to
         byte bytIndexC = -1;
         byte bytIndexI = -1;
