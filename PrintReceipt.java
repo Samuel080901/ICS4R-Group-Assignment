@@ -16,15 +16,11 @@
  */
 import java.util.*;
 import java.io.*;
-public class ClassReceiptJenny
+public class PrintReceipt
 {
-    public static void main(String args[])
-    {
-        testMethod();
-    }
-    
+
     //J put everything in 1 method, but during run you can seperate into several
-    public static void testMethod()
+    public static void testMethod(String strUsername, ArrayList aItem)
     {
         //J variables
         byte bytChoice;
@@ -32,17 +28,20 @@ public class ClassReceiptJenny
         int intCard;
         float fltTotal = 0;
         String strName = "Name here";
-        
+
         //J example arraylist, hardcoded. 
-        ArrayList<Item> aExample = new ArrayList<Item>();
-        aExample.add(new Item("Line 1", (float)(1.1), (byte)(1)));
-        aExample.add(new Item("Line 2", (float)(2.2), (byte)(2)));
-        aExample.add(new Item("Line 3", (float)(3.3), (byte)(3)));
-        
+        ArrayList<Item> aItemList = new ArrayList<Item>();
+        // aItemList.add(new Item("Line 1", (float)(1.1), (byte)(1)));
+        // aItemList.add(new Item("Line 2", (float)(2.2), (byte)(2)));
+        // aItemList.add(new Item("Line 3", (float)(3.3), (byte)(3)));
+
+        //R building PrintWriter object to save user shopping list to user's file
+        PrintWriter out;
+
         //J output list to user to confirm purcahse
         //J you can make the output shopping list a new method and use it all over Run
         System.out.println("Your shopping list contains: ");
-        for (Item i:aExample)
+        for (Item i:aItemList)
         {
             System.out.println(i.getAmount()+"    "+i.getName()+"   $"+i.getPrice());
         }
@@ -50,11 +49,11 @@ public class ClassReceiptJenny
         System.out.println(" (if you leave, you can save for next time)");
         System.out.println("  1. purchase     2. leave");
         bytChoice = new Scanner(System.in).nextByte();
-        
-        
+
+
         if(bytChoice == 1)
         {
-            if(aExample.isEmpty())
+            if(aItemList.isEmpty())
             {
                 System.out.println("The list is empty.");
                 System.out.println("You have not purchased anything.");
@@ -63,7 +62,7 @@ public class ClassReceiptJenny
             {
                 System.out.println("Confirm purchase? 1. y, 2. n");
                 bytChoice = new Scanner(System.in).nextByte();
-                
+
                 //J I learned this for dramatic effect, don't put it if you don't want to
                 try
                 {
@@ -71,7 +70,7 @@ public class ClassReceiptJenny
                     System.out.println("Enter credit card #: ");
                     //J parsed this cause it has error otherwise
                     intCard = Integer.parseInt(new Scanner(System.in).nextLine());
-                    
+
                     System.out.print("Processing purchase");
                     Thread.sleep(1000); //J this means wait for 1 sec
                     System.out.print(".");
@@ -85,12 +84,12 @@ public class ClassReceiptJenny
                 {
                     System.out.println("Sleep interrupted");
                 }
-                
+
                 //J output receipt to terminal window
                 System.out.println("\nHere's your receipt: ");
                 System.out.println("---RECEIPT OF SALE---");
                 System.out.println("        ESHOP   ");
-                for (Item i:aExample)
+                for (Item i:aItemList)
                 {
                     System.out.println(i.getAmount()+"    "+i.getName()+"   $"+i.getPrice());
                     fltTotal += i.getPrice();
@@ -100,9 +99,10 @@ public class ClassReceiptJenny
                 System.out.println(strName);
                 System.out.println("------------------");
                 System.out.print("THANK YOU FOR PURCHASING AT ESHOP");
-                
+
             }
         }
+
         if(bytChoice == 2)
         {
             System.out.println("You have chosen not to purchase.");
@@ -111,6 +111,20 @@ public class ClassReceiptJenny
             if (strChoice.equalsIgnoreCase("y"))
             {
                 System.out.println("You have chosen to leave. All cart items are saved for next visit.");
+
+                //R printing cart items out to user's file for easy access next time user logs in
+                try
+                {
+                    out = new PrintWriter(new FileWriter(strUsername + ".txt", true));
+                    for (byte i = 0; i < aItemList.size(); i++)
+                    {
+                        out.println(aItemList.get(i));
+                    }
+                }
+                catch (Exception e)
+                {}
+
+                
             }
             //J didn't code anything for this since I assume files don't auto delete
             else
@@ -121,6 +135,5 @@ public class ClassReceiptJenny
             }
         }
     }
-    
-    
+
 }

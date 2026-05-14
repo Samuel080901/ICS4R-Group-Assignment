@@ -47,15 +47,15 @@ public class run
     ArrayList<Item> itemList = new ArrayList<Item>();
 
     
-    
-
     public void Run(){
 
         //S:call loggin in user class
         User.logIn();
+        String strUsername = User.getUsername();
+        
         Input();
         //H - call the receipt class
-        ClassReceiptJenny.testMethod();
+        PrintReceipt.testMethod(strUsername, itemList);
     }
     //Samuel - run method
     public void Input(){
@@ -101,9 +101,6 @@ public class run
         }while(bytIndexC <= 0 || bytIndexC > aItemList[0].length);
         
         
-        
-        
-        
         //S:create a do while loop that loop until user enter correct value
         do{
            //Samuel : output the list of item in category that user chooses
@@ -116,13 +113,12 @@ public class run
         //S: ask for input
         try{
             bytIndexI = new Scanner(System.in).nextByte();
-            
-            
         }
-        catch (Exception e){
-            
+        catch (Exception e)
+        {
             bytIndexI = 100;
         }
+        
         //S: code a if statement to output user enter something wrong
         if(bytIndexI <= 0 || bytIndexI > aItemList[bytIndexC].length){
             //S: clear terminal window
@@ -154,9 +150,6 @@ public class run
             }
             
         }while(bytItemAmount <= 0 );
-        
-        
-        
         
         
         //S:ask user extra information based on what they choose to buy
@@ -212,16 +205,10 @@ public class run
                 
                 //create a object using all the input and save that into arralist
 
-                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount,bolTemp,fltTemp));
+                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp,(byte)12,fltTemp));
 
 
-            } 
-            else{
-                
-                //S:create a object using all the input and save that into arralist
-
-                itemList.add(new Item(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount));
-            }
+            }            
         }
         else if (bytIndexC == 2){//S:(Furniture)
 
@@ -250,7 +237,7 @@ public class run
             }
             
             //create a object using all the input and save that into arralist
-            itemList.add(new Furniture(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount,bolTemp));
+            itemList.add(new Furniture(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp));
         }    
         
         
@@ -280,7 +267,7 @@ public class run
             }while(strTemp1.equals(null));//ask and populate the temp string
             
             //create a new clothing object
-            itemList.add( new Clothes(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount, strTemp1, strTemp2));
+            itemList.add( new Clothes(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount, strTemp1, strTemp2));
             
         }
         else if (bytIndexC == 4){//H -(Electronic Device)
@@ -334,11 +321,9 @@ public class run
             }while(fltTemp <= 1);//runs until the temp is populated
             
             //H - create a new electronic device object
-            itemList.add( new ElectronicDevice(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1], bytItemAmount, shrTemp, bolTemp, fltTemp));
+            itemList.add( new ElectronicDevice(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI], bytItemAmount, shrTemp, bolTemp, fltTemp));
             
         }
-        
-        
         
         
         //S:ask user wants to purchase a new item or not
@@ -357,16 +342,19 @@ public class run
                 
             }while(strTemp1.equals("1") );
         
-            //S:Convert yes or no into true or false
-            if(strTemp1.equalsIgnoreCase("Yes")){
-                Input();
-            }
-            
+        //S:Convert yes or no into true or false
+        if(strTemp1.equalsIgnoreCase("Yes")){
+            Input();
+        }
+    }
+    
+    //R
+    public ArrayList getPreviousList()
+    {
         
     }
     
+    
+    
 
 }
-
-
-
