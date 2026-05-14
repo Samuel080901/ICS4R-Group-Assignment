@@ -7,7 +7,7 @@
 //S:import date 
 import java.time.LocalDate;
 
-//S: change the strExpiryday into object/variable type  
+//S: changed the strExpiryday into object/variable type  
 
 
 
@@ -40,7 +40,7 @@ public class Food extends Item
     }
     //create a method that create a random future date
     public LocalDate randomDate(){
-        int n = (int)(Math.random()*1000);
+        int n = (int)(Math.random()*100);
         LocalDate currentDate = LocalDate.now();
         return currentDate.plusDays(n);
     }

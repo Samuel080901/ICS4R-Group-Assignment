@@ -4,6 +4,8 @@
  * @author (Jenny Bi)
  * @version (May 8, 2026)
  */
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 public class Produce extends Food
 {
     //J instance variables
@@ -28,7 +30,7 @@ public class Produce extends Food
         this.fltWeight = -1;
     }
     //J Constructor
-    Produce(String n,float p,byte a, boolean l, byte d, float w)
+    Produce(String n,float p,byte a, boolean l, float w)
     {
 
 
@@ -37,7 +39,7 @@ public class Produce extends Food
 
 
         this.bolLocal = l;
-        this.bytDaysExpired = d;
+        this.bytDaysExpired = calculateExpiryDate();
         this.fltWeight = w;
     }
     
@@ -65,5 +67,19 @@ public class Produce extends Food
     public float getWeight()
     {
         return this.fltWeight;
+    }
+    
+    
+    public byte calculateExpiryDate(){
+        //J test substracting 2 different dates to find out how many dates passed
+        LocalDate givenDate = getExpiryDay(); //other day
+        LocalDate today = LocalDate.now(); //today
+
+        // Difference in days
+        byte daysBetween = (byte)(ChronoUnit.DAYS.between(givenDate, today));
+    
+    
+        return daysBetween;
+    
     }
 }
