@@ -64,7 +64,7 @@ public class User
     }
 
     //R log in method for users--new and old
-    public static void logIn()
+    public static String logIn()
     {
         //pre-building scanner and file io objects for later use
         Scanner userInput = new Scanner(System.in);
@@ -135,6 +135,8 @@ public class User
         {
             System.out.println("Error writing to file");
         }
+        
+        return strUsername;
     }
 
     public String toString()
