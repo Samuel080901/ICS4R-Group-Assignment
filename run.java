@@ -11,6 +11,9 @@ In the end,ask if the user wants to purchase the things in the shopping cart or 
  * @version (2026/05/08)
  */
 import java.util.ArrayList;
+//import the local date
+import java.time.LocalDate;
+
 //S: if there is comment with no name with it,its probably mine
 public class run
 {
@@ -209,7 +212,7 @@ public class run
                 
                 //create a object using all the input and save that into arralist
 
-                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,"a",bolTemp,(byte)12,fltTemp));
+                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp,(byte)12,fltTemp));
 
 
             }            
