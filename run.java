@@ -212,7 +212,7 @@ public class run
                 
                 //create a object using all the input and save that into arralist
 
-                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount,bolTemp,(byte)12,fltTemp));
+                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount,bolTemp,fltTemp));
 
 
             } 
