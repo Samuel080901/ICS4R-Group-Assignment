@@ -17,6 +17,8 @@ public class Produce extends Food
         return this.fltPrice*fltWeight;
     }
     
+    
+
     //J Default Constructor
     Produce()
     {
