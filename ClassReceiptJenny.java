@@ -52,7 +52,6 @@ public class ClassReceiptJenny
         bytChoice = new Scanner(System.in).nextByte();
         
         
-        
         if(bytChoice == 1)
         {
             if(aExample.isEmpty())

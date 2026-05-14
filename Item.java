@@ -4,12 +4,14 @@
  * @author (Razan Sherif)
  * @version (08/05/26)
  */
+import java.time.LocalDate;
 public class Item
 {
     //R instance variables
     String strName;
     float fltPrice; //for produce this is price per pound
     byte bytItemAmount;
+    LocalDate DateMade = LocalDate.now();
     
     //R default constructor
     public Item()

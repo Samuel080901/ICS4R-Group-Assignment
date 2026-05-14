@@ -6,6 +6,8 @@
  * @version (May 13, 2026)
  */
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class DateClassJenny
 {
     public static void main(String args[])
@@ -27,5 +29,15 @@ public class DateClassJenny
         int n = (int)(Math.random()*1000);
         System.out.println(n);
         System.out.println(currentDate.plusDays(n));
+        
+        
+        //J test substracting 2 different dates to find out how many dates passed
+        LocalDate givenDate = LocalDate.of(2023, 5, 10); //other day
+        LocalDate today = LocalDate.now(); //today
+
+        // Difference in days
+        long daysBetween = ChronoUnit.DAYS.between(givenDate, today);
+        
+        System.out.println("Days between: " + daysBetween); 
     }
 }

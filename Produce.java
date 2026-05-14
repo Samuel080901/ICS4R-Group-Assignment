@@ -8,7 +8,7 @@ public class Produce extends Food
 {
     //J instance variables
     private boolean bolLocal;
-    private byte bytDaysExpired; //J this shows days until expiry, etc -1 is 1 day until expiry
+    private byte bytDaysExpired; //J this shows days until expiry, ex. -1 is 1 day until expiry
     private float fltWeight; //J weight in pounds
     
     //J conversion method
