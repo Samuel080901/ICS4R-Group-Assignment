@@ -354,8 +354,9 @@ public class run
     //R method to pull saved lists data from user file to make/recreate a new itemlist 
     public ArrayList getPreviousList()
     {
-        BufferedReader in;++
+        BufferedReader in;
         
+        return
         
         
     }
