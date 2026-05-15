@@ -145,6 +145,16 @@ public class PrintReceipt
     
     
     public void remove(ArrayList<Item> ItemList){
+        boolean bolYesNo = true;
+        
+        
+        
+        do{ 
+        
+            //H - for loop that prints the list to the user
+            for(byte i = 1; i < ItemList.size(); i++){System.out.println(i + "." + ItemList.get(i));}
+        
+        
     
     
     
@@ -203,10 +213,7 @@ public class PrintReceipt
     
     
     
-    
-    
-    
-    
+        }while(bolYesNo = true);
     }
 
 }
