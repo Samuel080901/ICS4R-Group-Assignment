@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Clothes here.
  *
@@ -11,12 +10,15 @@ public class Clothes extends Item
     //H - instance variables for clothes object
     private String strType, strBrand;
     
+    //J output all info
+    @Override
+    public String toString()
+    {
+        return this.strName+" "+this.fltPrice+" "+this.bytItemAmount+" "+this.strType+" "+this.strBrand;
+    }
+    
     //H - constructor for clothes object
-    
-
-    
     public Clothes(String n, float p, byte a, String t, String b)
-
     {
         super(n, p, a);
         strType = t;

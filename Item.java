@@ -14,6 +14,12 @@ public class Item implements Serializable
     byte bytItemAmount;
     LocalDate DateMade = LocalDate.now();
     
+    //J output all info
+    public String toString()
+    {
+        return this.strName+" "+this.fltPrice+" "+this.bytItemAmount;
+    }
+    
     //R default constructor
     public Item()
     {

@@ -53,7 +53,9 @@ public class run
     public void Run(){
 
         //S:call loggin in user class
+
         
+
         String strUsername = User.logIn();
         
         Input();
@@ -392,8 +394,6 @@ public class run
         }
        
         return aItemList;
-        
-        
     }
     
     
