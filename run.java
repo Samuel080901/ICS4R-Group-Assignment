@@ -208,10 +208,19 @@ public class run
                 
                 //create a object using all the input and save that into arralist
 
-                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp,fltTemp));
+
+                //itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp,fltTemp));
+
+                itemList.add(new Produce(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount,bolTemp,fltTemp));
 
 
-            }            
+
+            }
+            else{
+            
+                itemList.add(new Item(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount));
+            
+            }
         }
         else if (bytIndexC == 2){//S:(Furniture)
 
@@ -240,7 +249,7 @@ public class run
             }
             
             //create a object using all the input and save that into arralist
-            itemList.add(new Furniture(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp));
+            itemList.add(new Furniture(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount,bolTemp));
         }    
         
         
@@ -270,7 +279,7 @@ public class run
             }while(strTemp1.equals(null));//ask and populate the temp string
             
             //create a new clothing object
-            itemList.add( new Clothes(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount, strTemp1, strTemp2));
+            itemList.add( new Clothes(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount, strTemp1, strTemp2));
             
         }
         else if (bytIndexC == 4){//H -(Electronic Device)
@@ -324,7 +333,7 @@ public class run
             }while(fltTemp <= 1);//runs until the temp is populated
             
             //H - create a new electronic device object
-            itemList.add( new ElectronicDevice(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI], bytItemAmount, shrTemp, bolTemp, fltTemp));
+            itemList.add( new ElectronicDevice(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1], bytItemAmount, shrTemp, bolTemp, fltTemp));
             
         }
         
@@ -355,8 +364,9 @@ public class run
     public ArrayList getPreviousList()
     {
         BufferedReader in;
+        String str;
         
-        return
+        retu;
         
         
     }
