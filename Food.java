@@ -16,6 +16,13 @@ public class Food extends Item
     //J instance variables
     private LocalDate ExpiryDay; //J specific date of expiry, etc. May 9th, 2026
     
+    //J output all info
+    @Override
+    public String toString()
+    {
+        return this.strName+" "+this.fltPrice+" "+this.bytItemAmount+" "+this.ExpiryDay;
+    }
+    
     //J default constructor
     Food()
     {
