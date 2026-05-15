@@ -229,7 +229,7 @@ public class PrintReceipt implements Serializable
         
         do{
                 //S: ou tput a message to ask user amount user wants to purchase
-                System.out.println("Do you want the food to be local (Yes/No)");
+                System.out.println("Do you want to remove the item (Yes/No)");
                 
                 
                 strYesNo = new Scanner(System.in).nextLine();
@@ -244,13 +244,11 @@ public class PrintReceipt implements Serializable
             
         //S:Convert yes or no into true or false
         if(strYesNo.equalsIgnoreCase("Yes")){
-            bolYesNo  = true;
+            ItemList.remove(bytItemNum-1);
         }
-        else if(strYesNo.equalsIgnoreCase("No")){
-            bolYesNo  = false;
-        }
+        
     
-    
+        
     
     
     

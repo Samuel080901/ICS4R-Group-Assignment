@@ -47,7 +47,7 @@ public class run
     };
     
     //S: create a arraylist tha is used as shopping list
-    ArrayList<Item> itemList = new ArrayList<Item>();
+    static ArrayList<Item> itemList = new ArrayList<Item>();
 
     
     public void Run(){
