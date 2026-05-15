@@ -163,7 +163,7 @@ public class run
                 //S: prompt extra info 
                 System.out.println("");
                 do{
-                //S: output a message to ask user amount user wants to purchase
+                //S: ou tput a message to ask user amount user wants to purchase
                 System.out.println("Do you want the food to be local (Yes/No)");
                 
                 

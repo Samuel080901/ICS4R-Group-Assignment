@@ -188,14 +188,15 @@ public class PrintReceipt
     
     
     
+    //bytItemNum
     
     
+    //S: output the info about the item that user slect
+    System.out.println(ItemList.get(bytItemNum-1));
     
     
-    
-    
-    
-    
+    //S: ask user do they want to remove the item or not
+    System.out.print("Do you want to remove the item (Yes or No)");
     
     
     
