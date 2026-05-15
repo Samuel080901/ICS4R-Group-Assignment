@@ -1,10 +1,13 @@
+//R implementing serializable to save an rebuild saved objects
+import java.io.Serializable;
+
 /**
  * Write a description of class Clothes here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Clothes extends Item
+public class Clothes extends Item implements Serializable
 {
     
     //H - instance variables for clothes object

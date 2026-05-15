@@ -154,13 +154,19 @@ public class PrintReceipt implements Serializable
     public void remove(ArrayList<Item> ItemList){
         //H - Declare variables used for this method
         boolean bolYesNo = true;
+
+        byte bytItemNum = 0;
+
         String strYesNo;
-        byte bytItemNum;
+        
+        
+ 
         
         
         
-        
+
         //H - asks the user if they want to see their list and remove an item
+
         System.out.println("Would you like to check the info or remove an item from your cart?");
         strYesNo = new Scanner(System.in).nextLine().toLowerCase();
         
@@ -243,5 +249,92 @@ public class PrintReceipt implements Serializable
         {
             remove(ItemList);        
         }
+
+        do{ 
+        
+            //H - for loop that prints the list to the user
+            for(byte i = 1; i < ItemList.size(); i++){System.out.println(i + "." + ItemList.get(i));}
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        //bytItemNum
+        
+        
+        //S: output the info about the item that user slect
+        System.out.println(ItemList.get(bytItemNum-1));
+        
+        
+        do{
+                //S: ou tput a message to ask user amount user wants to purchase
+                System.out.println("Do you want the food to be local (Yes/No)");
+                
+                
+                strYesNo = new Scanner(System.in).nextLine();
+                //S:output a message if user enter negative value
+                if(!strYesNo.equalsIgnoreCase("Yes") &&!strYesNo.equals("No")){
+                    System.out.println("Enter Yes or No");
+                    strYesNo = "1";
+                }
+               
+                
+                }while(strYesNo.equals("1") );
+            
+        //S:Convert yes or no into true or false
+        if(strYesNo.equalsIgnoreCase("Yes")){
+            bolYesNo  = true;
+        }
+        else if(strYesNo.equalsIgnoreCase("No")){
+            bolYesNo  = false;
+        }
+    
+    
+    
+    
+    
+    
+        }while(bolYesNo = true);
+
     }
     }
