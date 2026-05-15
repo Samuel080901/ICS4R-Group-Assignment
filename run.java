@@ -51,7 +51,7 @@ public class run
 
         //S:call loggin in user class
         User.logIn();
-        String strUsername = User.getUsername();
+        String strUsername = User.logIn();
         
         Input();
         //H - call the receipt class
