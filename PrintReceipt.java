@@ -153,18 +153,17 @@ public class PrintReceipt implements Serializable
     
     public void remove(ArrayList<Item> ItemList){
         boolean bolYesNo = true;
-<<<<<<< HEAD
-         
+
         byte bytItemNum;
-=======
+
         String strYesNo;
         
-        
->>>>>>> 96b694efb4f7b563ae5fe487608b4172699df54e
-        
+ 
         
         
         
+        
+
         System.out.println("Would you like to check the info or remove an item from your cart?");
         strYesNo = new Scanner(System.in).nextLine().toLowerCase();
         
@@ -248,7 +247,7 @@ public class PrintReceipt implements Serializable
             bolYesNo  = true;
         }
         else if(strYesNo.equalsIgnoreCase("No")){
-            bolYesNO  = false;
+            bolYesNo  = false;
         }
     
     
