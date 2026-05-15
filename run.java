@@ -13,6 +13,9 @@ In the end,ask if the user wants to purchase the things in the shopping cart or 
 import java.util.ArrayList;
 //import the local date
 import java.time.LocalDate;
+//R import file IO class
+import java.io.*;
+
 
 //S: if there is comment with no name with it,its probably mine
 public class run
@@ -50,7 +53,6 @@ public class run
     public void Run(){
 
         //S:call loggin in user class
-        User.logIn();
         String strUsername = User.logIn();
         
         Input();
@@ -205,7 +207,11 @@ public class run
                 
                 //create a object using all the input and save that into arralist
 
+
+                //itemList.add(new Produce(aItemList[bytIndexC][bytIndexI],aItemPrice[bytIndexC-1][bytIndexI],bytItemAmount,bolTemp,fltTemp));
+
                 itemList.add(new Produce(aItemList[bytIndexC][bytIndexI-1],aItemPrice[bytIndexC-1][bytIndexI-1],bytItemAmount,bolTemp,fltTemp));
+
 
 
             }
@@ -353,9 +359,14 @@ public class run
         }
     }
     
-    //R
+    //R method to pull saved lists data from user file to make/recreate a new itemlist 
     public ArrayList getPreviousList()
     {
+        BufferedReader in;
+        String str;
+        
+        return null;
+        
         
     }
     
