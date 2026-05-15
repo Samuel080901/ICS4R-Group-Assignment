@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Furniture here.
  *
@@ -9,6 +8,13 @@ public class Furniture extends Item
 {
     //H - instance variables for the furniture object
     private boolean bolIsDecoration;
+    
+    //J output all info
+    @Override
+    public String toString()
+    {
+        return this.strName+" "+this.fltPrice+" "+this.bytItemAmount+" "+this.bolIsDecoration;
+    }
     
     //H - constructor for furniture object
     Furniture(String n, float p, byte a, boolean d)

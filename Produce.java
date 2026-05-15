@@ -18,9 +18,27 @@ public class Produce extends Food
     {
         return this.fltPrice*fltWeight;
     }
-    
-    
+    //J method to calculate expiry date 
+    public byte calculateExpiryDate(){
+        //J test substracting 2 different dates to find out how many dates passed
+        LocalDate givenDate = getExpiryDay(); //other day
+        LocalDate today = LocalDate.now(); //today
 
+        // Difference in days
+        byte daysBetween = (byte)(ChronoUnit.DAYS.between(givenDate, today));
+    
+    
+        return daysBetween;
+    
+    }
+    
+    //J output all info
+    @Override 
+    public String toString()
+    {
+        return this.strName+" "+this.fltPrice+" "+this.bytItemAmount+" "+this.bolLocal+" "+this.bytDaysExpired+" "+this.fltWeight;
+    }
+    
     //J Default Constructor
     Produce()
     {
@@ -32,12 +50,7 @@ public class Produce extends Food
     //J Constructor
     Produce(String n,float p,byte a, boolean l, float w)
     {
-
-
         super( n,p, a);
-
-
-
         this.bolLocal = l;
         this.bytDaysExpired = calculateExpiryDate();
         this.fltWeight = w;
@@ -67,19 +80,5 @@ public class Produce extends Food
     public float getWeight()
     {
         return this.fltWeight;
-    }
-    
-    
-    public byte calculateExpiryDate(){
-        //J test substracting 2 different dates to find out how many dates passed
-        LocalDate givenDate = getExpiryDay(); //other day
-        LocalDate today = LocalDate.now(); //today
-
-        // Difference in days
-        byte daysBetween = (byte)(ChronoUnit.DAYS.between(givenDate, today));
-    
-    
-        return daysBetween;
-    
     }
 }
