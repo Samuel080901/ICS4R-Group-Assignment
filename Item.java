@@ -5,13 +5,20 @@
  * @version (08/05/26)
  */
 import java.time.LocalDate;
-public class Item
+import java.io.Serializable;
+public class Item implements Serializable
 {
     //R instance variables
     String strName;
     float fltPrice; //for produce this is price per pound
     byte bytItemAmount;
     LocalDate DateMade = LocalDate.now();
+    
+    //J output all info
+    public String toString()
+    {
+        return this.strName+" "+this.fltPrice+" "+this.bytItemAmount;
+    }
     
     //R default constructor
     public Item()

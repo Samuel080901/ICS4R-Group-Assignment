@@ -1,4 +1,3 @@
-
 /**
  * Electronic device class with storage, wifi and size instance variables.
  *
@@ -11,7 +10,14 @@ public class ElectronicDevice extends Item
     short shrStorage;
     boolean bolNeedsWifi;
     float fltScreenSize;
-
+    
+    //J output all info
+    @Override
+    public String toString()
+    {
+        return this.strName+" "+this.fltPrice+" "+this.bytItemAmount+" "+this.shrStorage+" "+this.bolNeedsWifi+" "+this.fltScreenSize;
+    }
+    
     public ElectronicDevice()
     {
         // initialise instance variables
