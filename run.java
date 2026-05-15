@@ -163,7 +163,7 @@ public class run
             //S: use the PRODUCEINDEX to check is item purchase produce or not,if yes ask for extra information
             if(bytIndexI <= PRODUCEINDEX){
                 //S: prompt extra info 
-                System.out.println("");
+                //System.out.println("");
                 do{
                 //S: ou tput a message to ask user amount user wants to purchase
                 System.out.println("Do you want the food to be local (Yes/No)");
