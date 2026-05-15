@@ -5,7 +5,8 @@
  * @version (08/05/26)
  */
 import java.time.LocalDate;
-public class Item
+import java.io.Serializable;
+public class Item implements Serializable
 {
     //R instance variables
     String strName;
