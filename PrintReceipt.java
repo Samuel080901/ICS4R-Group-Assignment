@@ -157,8 +157,10 @@ public class PrintReceipt implements Serializable
 
         byte bytItemNum = 0;
 
+
         String strYesNo;
         
+ 
         
  
         
@@ -166,6 +168,7 @@ public class PrintReceipt implements Serializable
         
 
         //H - asks the user if they want to see their list and remove an item
+
 
         System.out.println("Would you like to check the info or remove an item from your cart?");
         strYesNo = new Scanner(System.in).nextLine().toLowerCase();
