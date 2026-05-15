@@ -16,7 +16,7 @@
  */
 import java.util.*;
 import java.io.*;
-public class PrintReceipt
+public class PrintReceipt implements Serializable
 {
 
     //J put everything in 1 method, but during run you can seperate into several
@@ -35,13 +35,13 @@ public class PrintReceipt
         // aItemList.add(new Item("Line 2", (float)(2.2), (byte)(2)));
         // aItemList.add(new Item("Line 3", (float)(3.3), (byte)(3)));
 
-        //R building PrintWriter object to save user shopping list to user's file
-        PrintWriter out;
+        //R building OOS object to save user shopping list to user's file
+        ObjectOutputStream out;
 
         //J output list to user to confirm purcahse
         //J you can make the output shopping list a new method and use it all over Run
         System.out.println("Your shopping list contains: ");
-        for (Item i:aItemList)
+        for (Item i: aItemList)
         {
             System.out.println(i.getAmount()+"    "+i.getName()+"   $"+i.getPrice());
         }
@@ -49,7 +49,6 @@ public class PrintReceipt
         System.out.println(" (if you leave, you can save for next time)");
         System.out.println("  1. purchase     2. leave");
         bytChoice = new Scanner(System.in).nextByte();
-
 
         if(bytChoice == 1)
         {
@@ -115,16 +114,24 @@ public class PrintReceipt
                 //R printing cart items out to user's file for easy access next time user logs in
                 try
                 {
-                    out = new PrintWriter(new FileWriter(strUsername + ".txt", true));
+                    out = new ObjectOutputStream(new FileOutputStream(strUsername + ".txt", true));
                     for (byte i = 0; i < aItemList.size(); i++)
                     {
-                        out.println(aItemList.get(i));
+                        out.writeObject(aItemList.get(i));
                     }
+                    
+                    out.close();
                 }
-                catch (Exception e)
-                {}
+                catch (FileNotFoundException e)
+                {
+                    System.out.println("File not found");  
+                }
 
-                
+                catch (IOException e)
+                {
+                    System.out.println("Error writing to file");
+                }
+
             }
             //J didn't code anything for this since I assume files don't auto delete
             else

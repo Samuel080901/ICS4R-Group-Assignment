@@ -361,12 +361,37 @@ public class run
     }
     
     //R method to pull saved lists data from user file to make/recreate a new itemlist 
-    public ArrayList getPreviousList()
+    public ArrayList getPreviousList(String strUsername, ArrayList aItemList)
     {
-        BufferedReader in;
-        String str;
+        ObjectInputStream in;
         
-        retu;
+        try 
+        {
+            in = new ObjectInputStream(new FileInputStream(strUsername + ".txt"));
+            in.readLine();
+            in.readLine();
+            in.readLine();
+            
+            while (in.readObject() != null)
+            {
+                aItemList.add(in.readLine());
+            }
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("File not found");  
+        }
+
+        catch (IOException e)
+        {
+            System.out.println("Error writing to file");
+        }
+        catch (ClassNotFoundException e)
+        {
+            
+        }
+       
+        return aItemList;
         
         
     }
