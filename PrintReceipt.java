@@ -153,9 +153,24 @@ public class PrintReceipt implements Serializable
     
     public void remove(ArrayList<Item> ItemList){
         boolean bolYesNo = true;
+
+        byte bytItemNum;
+
+        String strYesNo;
+        
+ 
         
         
         
+        
+
+        System.out.println("Would you like to check the info or remove an item from your cart?");
+        strYesNo = new Scanner(System.in).nextLine().toLowerCase();
+        
+        if(strYesNo.equals("yes"))
+        {
+        
+        }
         do{ 
         
             //H - for loop that prints the list to the user
@@ -205,15 +220,35 @@ public class PrintReceipt implements Serializable
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        //bytItemNum
+        
+        
+        //S: output the info about the item that user slect
+        System.out.println(ItemList.get(bytItemNum-1));
+        
+        
+        do{
+                //S: ou tput a message to ask user amount user wants to purchase
+                System.out.println("Do you want the food to be local (Yes/No)");
+                
+                
+                strYesNo = new Scanner(System.in).nextLine();
+                //S:output a message if user enter negative value
+                if(!strYesNo.equalsIgnoreCase("Yes") &&!strYesNo.equals("No")){
+                    System.out.println("Enter Yes or No");
+                    strYesNo = "1";
+                }
+               
+                
+                }while(strYesNo.equals("1") );
+            
+        //S:Convert yes or no into true or false
+        if(strYesNo.equalsIgnoreCase("Yes")){
+            bolYesNo  = true;
+        }
+        else if(strYesNo.equalsIgnoreCase("No")){
+            bolYesNo  = false;
+        }
     
     
     

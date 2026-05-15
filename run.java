@@ -163,9 +163,9 @@ public class run
             //S: use the PRODUCEINDEX to check is item purchase produce or not,if yes ask for extra information
             if(bytIndexI <= PRODUCEINDEX){
                 //S: prompt extra info 
-                System.out.println("");
+                //System.out.println("");
                 do{
-                //S: output a message to ask user amount user wants to purchase
+                //S: ou tput a message to ask user amount user wants to purchase
                 System.out.println("Do you want the food to be local (Yes/No)");
                 
                 
@@ -368,6 +368,10 @@ public class run
         ObjectInputStream in;
         
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 663b361d65126aea8d3be5b8a5ff4c2420451970
 
         try 
         {
@@ -398,6 +402,12 @@ public class run
         return aItemList;
 
 
+<<<<<<< HEAD
+=======
+
+        
+ 
+>>>>>>> 663b361d65126aea8d3be5b8a5ff4c2420451970
     }
     
     
