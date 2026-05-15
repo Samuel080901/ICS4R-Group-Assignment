@@ -262,7 +262,7 @@ public class run
             //H - ask and populate the variables
             do{
                 //H - output a message to ask user storage amount the user wants to purchase
-                System.out.println("what kind of clothing do you have?");
+                System.out.println("Which size is your item of clothing");
                 //H - ask for input
                     //H - strTemp2 is set to null incase it was populated earlier
                     strTemp2 = null;
@@ -366,8 +366,6 @@ public class run
     public ArrayList getPreviousList(String strUsername, ArrayList aItemList)
     {
         ObjectInputStream in;
-        
-
 
 
         try 
@@ -400,8 +398,6 @@ public class run
 
 
 
-        
- 
     }
     
     

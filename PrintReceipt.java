@@ -152,25 +152,107 @@ public class PrintReceipt implements Serializable
     
     
     public void remove(ArrayList<Item> ItemList){
+        //H - Declare variables used for this method
         boolean bolYesNo = true;
 
-        byte bytItemNum;
+        byte bytItemNum = 0;
+
 
         String strYesNo;
         
  
         
+ 
         
         
         
 
+        //H - asks the user if they want to see their list and remove an item
+
+
         System.out.println("Would you like to check the info or remove an item from your cart?");
         strYesNo = new Scanner(System.in).nextLine().toLowerCase();
         
+        //H - an if statement that runs if the user entered yes
         if(strYesNo.equals("yes"))
         {
+            bolYesNo = true;
         
+            do{ 
+        
+                //H - for loop that prints the list to the user
+                for(byte i = 1; i < ItemList.size(); i++){System.out.println(i + "." + ItemList.get(i));}
+                
+                System.out.println("which item would you like to see?");
+                bytItemNum = new Scanner(System.in).nextByte();
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            }while(bolYesNo = true);
+        }else if(strYesNo.equals("no")){return;}//returns if the user enters no
+        
+        else
+        {
+            remove(ItemList);        
         }
+
         do{ 
         
             //H - for loop that prints the list to the user
@@ -254,6 +336,6 @@ public class PrintReceipt implements Serializable
     
     
         }while(bolYesNo = true);
-    }
 
-}
+    }
+    }

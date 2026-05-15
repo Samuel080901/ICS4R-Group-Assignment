@@ -6,7 +6,8 @@
  */
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-public class Produce extends Food
+import java.io.Serializable;
+public class Produce extends Food implements Serializable
 {
     //J instance variables
     private boolean bolLocal;
