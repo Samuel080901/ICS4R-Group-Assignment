@@ -1,13 +1,19 @@
+//R implementing serializable to save an rebuild saved objects
+import java.io.Serializable;
 /**
  * Write a description of class Furniture here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Furniture extends Item
+
+
+public class Furniture extends Item implements Serializable
 {
     //H - instance variables for the furniture object
     private boolean bolIsDecoration;
+    
+    
     
     //J output all info
     @Override

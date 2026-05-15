@@ -1,10 +1,12 @@
+//R implementing serializable to save an rebuild saved objects
+import java.io.Serializable;
 /**
  * Electronic device class with storage, wifi and size instance variables.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class ElectronicDevice extends Item
+public class ElectronicDevice extends Item implements Serializable
 {
     // instance variables - replace the example below with your own
     short shrStorage;

@@ -9,9 +9,10 @@ import java.time.LocalDate;
 
 //S: changed the strExpiryday into object/variable type  
 
+//R implementing serializable to save an rebuild saved objects
+import java.io.Serializable;
 
-
-public class Food extends Item
+public class Food extends Item implements Serializable
 {
     //J instance variables
     private LocalDate ExpiryDay; //J specific date of expiry, etc. May 9th, 2026
