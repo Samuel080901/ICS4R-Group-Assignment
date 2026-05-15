@@ -146,9 +146,20 @@ public class PrintReceipt
     
     public void remove(ArrayList<Item> ItemList){
         boolean bolYesNo = true;
+        String strYesNo;
         
         
         
+        
+        
+        
+        System.out.println("Would you like to check the info or remove an item from your cart?");
+        strYesNo = new Scanner(System.in).nextLine().toLowerCase();
+        
+        if(strYesNo.equals("yes"))
+        {
+        
+        }
         do{ 
         
             //H - for loop that prints the list to the user
